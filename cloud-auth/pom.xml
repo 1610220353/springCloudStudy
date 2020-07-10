@@ -80,6 +80,13 @@
             <artifactId>jjwt</artifactId>
             <version>0.9.1</version>
         </dependency>
+        <!--        引入公共组件-->
+        <dependency>
+            <groupId>org.guohong</groupId>
+            <artifactId>cloud-parent</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+
 
     </dependencies>
 </project>

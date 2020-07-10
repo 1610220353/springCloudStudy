@@ -25,7 +25,7 @@
         <dependencies>
             <dependency>
                 <groupId>org.guohong</groupId>
-                <artifactId>dependencies</artifactId>
+                <artifactId>cloud-dependencies</artifactId>
                 <version>${project.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
@@ -35,8 +35,9 @@
 
 
     <modules>
-        <module>dependencies</module>
+        <module>cloud-dependencies</module>
         <module>cloud-auth</module>
+        <module>cloud-parent</module>
     </modules>
 
 </project>
