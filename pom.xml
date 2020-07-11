@@ -33,11 +33,12 @@
         </dependencies>
     </dependencyManagement>
 
-
     <modules>
         <module>cloud-dependencies</module>
-        <module>cloud-auth</module>
         <module>cloud-parent</module>
+        <module>cloud-common</module>
+        <module>cloud-auth</module>
+
     </modules>
 
 </project>

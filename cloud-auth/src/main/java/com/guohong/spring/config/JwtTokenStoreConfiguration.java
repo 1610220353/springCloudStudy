@@ -41,7 +41,8 @@ public class JwtTokenStoreConfiguration {
     public JwtAccessTokenConverter jwtAccessTokenConverter(){
         JwtAccessTokenConverter accessTokenConverter = new JwtAccessTokenConverter();
 
-
+        Properties props = System.getProperties();
+        System.out.println(props.get("spring.cloud.nacos.discovery.server-addr"));
         accessTokenConverter.setSigningKey("hah");
         return accessTokenConverter;
     }
