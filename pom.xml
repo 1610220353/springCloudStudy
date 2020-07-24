@@ -38,7 +38,8 @@
         <module>cloud-parent</module>
         <module>cloud-common</module>
         <module>cloud-auth</module>
-        <module>cloud-flowable</module>
+        <module>cloud-service</module>
+        <module>cloud-service-api</module>
 
     </modules>
 

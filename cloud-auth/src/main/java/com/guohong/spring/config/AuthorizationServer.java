@@ -3,6 +3,7 @@ package com.guohong.spring.config;
 import com.guohong.spring.constant.AuthConstant;
 import com.guohong.spring.granter.CustomizeTokenGranter;
 import com.guohong.spring.service.ClientDetailsServiceImpl;
+import com.guohong.spring.service.CustomUserDetailsService;
 import lombok.SneakyThrows;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -51,6 +52,8 @@ public class AuthorizationServer extends AuthorizationServerConfigurerAdapter {
     @Resource(name = "jwtTokenEnhancer")
     private TokenEnhancer jwtTokenEnhancer;
 
+    @Resource(name = "customUserDetailsService")
+    private CustomUserDetailsService customUserDetailsService;
 
     /**
      * 配置授权（authorization）以及令牌（token）的访问端点和令牌服务(token services)。
@@ -60,7 +63,7 @@ public class AuthorizationServer extends AuthorizationServerConfigurerAdapter {
     @Override
     public void configure(AuthorizationServerEndpointsConfigurer endpoints) {
         //获取自定义tokenGranter
-        TokenGranter tokenGranter = CustomizeTokenGranter.getTokenGranter(authenticationManager, endpoints);
+        TokenGranter tokenGranter = CustomizeTokenGranter.getTokenGranter(authenticationManager, endpoints,customUserDetailsService);
         endpoints
                 // 用于支持密码模式
                 .authenticationManager(authenticationManager)

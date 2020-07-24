@@ -150,12 +150,5 @@ return false;
        return null;
     }
 
-    /**
-     * 测试方法
-     */
-    public static void main(String args[]) {
-        YmlUtils ymlUtils = new YmlUtils("/E:/springCloudStudy/cloud-auth/target/classes/application.yml");
-        System.out.println(ymlUtils.updateYml());
-    }
 }
 

@@ -16,6 +16,8 @@
  */
 package com.guohong.spring.granter;
 
+import com.guohong.spring.granter.impl.PhonePasswordCustomTokenGranter;
+import com.guohong.spring.service.CustomUserDetailsService;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.oauth2.config.annotation.web.configurers.AuthorizationServerEndpointsConfigurer;
 import org.springframework.security.oauth2.provider.CompositeTokenGranter;
@@ -35,12 +37,14 @@ public class CustomizeTokenGranter {
 	/**
 	 * 自定义tokenGranter
 	 */
-	public static TokenGranter getTokenGranter(final AuthenticationManager authenticationManager, final AuthorizationServerEndpointsConfigurer endpoints) {
+	public static TokenGranter getTokenGranter(final AuthenticationManager authenticationManager, final AuthorizationServerEndpointsConfigurer endpoints, final CustomUserDetailsService userDetailsService) {
 		// 默认tokenGranter集合
 		List<TokenGranter> granters = new ArrayList<>(Collections.singletonList(endpoints.getTokenGranter()));
 		// 增加验证码模式
 		granters.add(new CaptchaTokenGranter(authenticationManager, endpoints.getTokenServices(), endpoints.getClientDetailsService(), endpoints.getOAuth2RequestFactory()));
 		// 组合tokenGranter集合
+		//增加自定义模式
+		granters.add(new PhonePasswordCustomTokenGranter(userDetailsService,endpoints.getTokenServices(), endpoints.getClientDetailsService(), endpoints.getOAuth2RequestFactory()));
 		return new CompositeTokenGranter(granters);
 	}
 
