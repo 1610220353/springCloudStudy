@@ -49,8 +49,4 @@ public class NacosUtils {
     }
 
 
-    public static void main(String[] args) {
-        NacosUtils nacosUtils = new NacosUtils("127.0.0.1:8848", "172.20.10.8", 8101, "ahaha", true);
-    }
-
 }

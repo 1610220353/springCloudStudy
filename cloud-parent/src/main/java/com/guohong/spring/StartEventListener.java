@@ -1,6 +1,5 @@
 package com.guohong.spring;
 
-import com.guohong.spring.utils.NacosUtils;
 import lombok.SneakyThrows;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -43,8 +42,6 @@ public class StartEventListener {
 
         log.info("正在加载nacos，地址为[{}]，即将注册[{}],IP为[{}]",serverAddr,appName,serverIp);
 
-        NacosUtils nacosUtils = new NacosUtils(serverAddr,serverIp,localPort,appName,true);
-        nacosUtils.upNacos();
 
         log.info("---[{}]---启动完成，当前使用的端口:[{}]，环境变量:[{}]---", appName, localPort, profile);
 

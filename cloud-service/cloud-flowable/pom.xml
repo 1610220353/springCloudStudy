@@ -14,30 +14,7 @@
     <version>${project.version}</version>
     <packaging>jar</packaging>
     <dependencies>
-        <!--        引入公共组件-->
-        <dependency>
-            <groupId>org.guohong</groupId>
-            <artifactId>cloud-parent</artifactId>
-            <version>${project.version}</version>
-        </dependency>
 
-        <dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
-        </dependency>
-
-        <!--        mysql jdbc 驱动-->
-        <dependency>
-            <groupId>mysql</groupId>
-            <artifactId>mysql-connector-java</artifactId>
-        </dependency>
-
-        <!--flowable工作流依赖-->
-        <dependency>
-            <groupId>org.flowable</groupId>
-            <artifactId>flowable-spring-boot-starter</artifactId>
-            <version>6.3.0</version>
-        </dependency>
 
     </dependencies>
 

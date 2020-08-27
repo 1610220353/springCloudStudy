@@ -12,6 +12,9 @@
     <artifactId>cloud-service-api</artifactId>
     <name>${project.artifactId}</name>
     <version>1.0-SNAPSHOT</version>
+    <modules>
+        <module>cloud-dubbo-provider-api</module>
+    </modules>
     <packaging>pom</packaging>
 
 

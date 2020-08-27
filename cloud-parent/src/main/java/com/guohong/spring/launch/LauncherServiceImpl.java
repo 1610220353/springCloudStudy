@@ -17,6 +17,7 @@
 package com.guohong.spring.launch;
 
 
+import com.guohong.spring.constant.AppConstant;
 import com.guohong.spring.constant.LauncherConstant;
 import com.guohong.spring.service.LauncherService;
 import com.guohong.spring.utils.PropsUtil;
@@ -42,6 +43,13 @@ public class LauncherServiceImpl  implements LauncherService {
 		PropsUtil.setProperty(props, "spring.cloud.sentinel.transport.dashboard", LauncherConstant.sentinelAddr(profile));
 		PropsUtil.setProperty(props, "spring.zipkin.base-url", LauncherConstant.zipkinAddr(profile));
 
+		// dubbo注册
+		PropsUtil.setProperty(props, "dubbo.application.name", appName);
+		PropsUtil.setProperty(props, "dubbo.application.qos.enable", "false");
+		PropsUtil.setProperty(props, "dubbo.protocol.name", "dubbo");
+		PropsUtil.setProperty(props, "dubbo.registry.address", "nacos://" + LauncherConstant.nacosAddr(profile) +"?namespace=" +AppConstant.DUBBO_NAMESPACE);
+		PropsUtil.setProperty(props, "dubbo.version", AppConstant.APPLICATION_VERSION);
+		PropsUtil.setProperty(props, "dubbo.scan.base-packages", AppConstant.BASE_PACKAGES);
 
 	}
 

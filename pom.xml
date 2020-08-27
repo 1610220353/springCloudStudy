@@ -18,6 +18,7 @@
     <properties>
         <!--        版本号-->
         <project.version>1.0-SNAPSHOT</project.version>
+        <dubbo.version>2.7.3</dubbo.version>
     </properties>
 
 
@@ -40,6 +41,8 @@
         <module>cloud-auth</module>
         <module>cloud-service</module>
         <module>cloud-service-api</module>
+        <module>cloud-gateWay</module>
+
 
     </modules>
 

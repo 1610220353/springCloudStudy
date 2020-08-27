@@ -8,12 +8,9 @@ import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.core.env.*;
 import org.springframework.util.Assert;
 import org.springframework.util.StringUtils;
-import org.yaml.snakeyaml.Yaml;
 
-import java.io.InputStream;
 import java.util.*;
 import java.util.function.Function;
-import java.util.stream.Collectors;
 
 /**
  * @author guohong
