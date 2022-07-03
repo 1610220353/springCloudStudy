@@ -1,0 +1,59 @@
+<!--<configuration>-->
+<!--    <jdbc>-->
+<!--        <driver>org.postgresql.Driver</driver>-->
+<!--        <url>jdbc:postgresql://postgresql.i.yufuid.org:5432/idaas?useJDBCCompliantTimezoneShift=true&amp;serverTimezone=UTC&amp;useSSL=false</url>-->
+<!--        <user>idaas</user>-->
+<!--        <password>NTi3WgJpt</password>-->
+<!--    </jdbc>-->
+
+<!--    <generator>-->
+<!--        <database>-->
+<!--            <name>org.jooq.meta.postgres.PostgresDatabase</name>-->
+<!--            &lt;!&ndash; table name &ndash;&gt;-->
+<!--            <includes>ResourceImg</includes>-->
+<!--            <inputSchema>public</inputSchema>&amp;-->
+<!--            <forcedTypes>-->
+<!--                &lt;!&ndash; Custom data type binding &ndash;&gt;-->
+<!--                <forcedType>-->
+<!--                    <userType>Boolean</userType>-->
+<!--                    <expression>lastSyncStatus</expression>-->
+<!--                </forcedType>-->
+
+<!--                <forcedType>-->
+<!--                    <userType>com.yufu.idaas.lcm.api.model.domain.ResourceImg.LinkStatus</userType>-->
+<!--                    <enumConverter>true</enumConverter>-->
+<!--                    <expression>linkStatus</expression>-->
+<!--                </forcedType>-->
+
+
+<!--                &lt;!&ndash; Common data type binding &ndash;&gt;-->
+<!--                <forcedType>-->
+<!--                    <userType>java.util.Map&lt;String, Object&gt;</userType>-->
+<!--                    <binding>com.yufu.idaas.lcm.kernel.dal.util.MapBinding</binding>-->
+<!--                    <types>JSONB?</types>-->
+<!--                </forcedType>-->
+<!--                <forcedType>-->
+<!--                    <userType>com.yufu.idaas.kernel.core.model.ModelStatus</userType>-->
+<!--                    <enumConverter>true</enumConverter>-->
+<!--                    <expression>status</expression>-->
+<!--                </forcedType>-->
+<!--            </forcedTypes>-->
+<!--        </database>-->
+
+<!--        <strategy>-->
+<!--            <name>com.yufu.idaas.lcm.kernel.dal.util.codegen.CamelCaseNamingStrategy</name>-->
+<!--        </strategy>-->
+
+<!--        <generate>-->
+<!--            <pojos>false</pojos>-->
+<!--            <records>true</records>-->
+<!--        </generate>-->
+
+<!--        <target>-->
+<!--            &lt;!&ndash; Package name &ndash;&gt;-->
+<!--            <packageName>com.yufu.idaas.lcm.resource.resourceimg.repository.dao</packageName>-->
+<!--            <directory>src/main/java</directory>-->
+<!--            <clean>false</clean>-->
+<!--        </target>-->
+<!--    </generator>-->
+<!--</configuration>-->

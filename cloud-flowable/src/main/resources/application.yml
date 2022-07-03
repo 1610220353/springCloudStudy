@@ -4,10 +4,9 @@ server:
 #数据源配置
 spring:
   datasource:
-    driver-class-name: com.mysql.jdbc.Driver
-    url: jdbc:mysql://127.0.0.1:3306/flowable-spring-boot?useUnicode=true&characterEncoding=utf-8&serverTimezone=Hongkong&useSSL=false&nullCatalogMeansCurrent=true
-    username: root
-    password: 123456
-flowable:
-  #关闭定时任务JOB
-  async-executor-activate: false
+    driver-class-name: org.postgresql.Driver
+    password: NTi3WgJpt
+    type: com.alibaba.druid.pool.DruidDataSource
+    url: jdbc:postgresql://postgresql.i.yufuid.org/idaas?useJDBCCompliantTimezoneShift=true&serverTimezone=UTC&useSSL=false
+    username: idaas
+

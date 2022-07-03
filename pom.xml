@@ -39,6 +39,7 @@
         <module>cloud-common</module>
         <module>cloud-auth</module>
         <module>cloud-flowable</module>
+        <module>cloud-stream</module>
 
     </modules>
 
