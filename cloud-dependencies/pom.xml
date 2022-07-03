@@ -11,7 +11,7 @@
     <properties>
 
         <!-- spring-->
-        <spring.starter.version>2.2.0.RELEASE</spring.starter.version>
+        <spring.starter.version>2.5.12</spring.starter.version>
         <spring.security.version>2.2.0.RELEASE</spring.security.version>
         <spring.oauth.version>2.3.5.RELEASE</spring.oauth.version>
         <spring.redis.version>2.1.6.RELEASE</spring.redis.version>
